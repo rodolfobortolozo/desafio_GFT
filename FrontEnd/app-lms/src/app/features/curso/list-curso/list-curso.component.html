@@ -1,0 +1,55 @@
+<div>
+  <H1>Lista de Cursos</H1>
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome do Curso </th>
+      <td mat-cell *matCellDef="let row"> {{row.nome}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="descricao">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Descrição </th>
+      <td mat-cell *matCellDef="let row"> {{row.descricao}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Ações </th>
+      <td mat-cell *matCellDef="let row"> 
+        @if(rolesRoute.includes(rolesEnum.ADM) ) {
+        <div style="display: flex; gap: 20px;" >
+          <button matFab matTooltip="Deletar" (click)="deletar(row.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        
+          <button matFab (click)="alterar(row.id)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+        }@else {
+        <div style="display: flex; gap: 20px;">
+
+          @if(!row.matriculado){
+            <button matFab matTooltip="Matricular" (click)="efetuarMatricula(row)">
+              <mat-icon >check</mat-icon>
+            </button>
+          }@else {
+            <button matFab matTooltip="Cadastrar Atividade" >
+              <mat-icon>add_box</mat-icon>
+            </button>
+          }          
+        </div>
+        }
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div style="display: flex; width: 100%; padding: 20px 0;">
+    <button mat-raised-button color="primary" [routerLink]="rolesRoute.includes(rolesEnum.ADM) ? ['/admin'] : ['/aluno']">
+      Voltar
+    </button>  
+  </div>
+</div>

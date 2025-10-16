@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+  font-family: 'Roboto', sans-serif;
+}
+/* Corpo principal */
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px;
+  text-align: center;
+}
+
+

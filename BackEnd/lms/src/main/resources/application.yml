@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: LMS
+  #DATASOURCE
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  #JPA
+  jpa:
+    #hibernate:
+      #ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
+#Security
+jwt_secret: hnoiuhgfspdbjhnq0486unbixfe~giu5e~df
+
+security:
+  jwt:
+    expiration: 86400000

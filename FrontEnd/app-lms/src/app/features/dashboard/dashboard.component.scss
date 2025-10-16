@@ -1,0 +1,20 @@
+/* Área de cadastro */
+.cadastro {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.cadastro-placeholder {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border: 2px dashed #90caf9;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1976d2;
+  background: #f8fbff;
+  transition: all 0.3s ease-in-out;
+}

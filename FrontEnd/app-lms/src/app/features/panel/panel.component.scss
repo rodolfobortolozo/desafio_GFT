@@ -1,0 +1,80 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #e3f2fd 100%);
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.login-btn {
+  border-radius: 20px;
+  text-transform: none;
+}
+
+/* Corpo principal */
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero {
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+}
+
+/* Área de cadastro */
+.cadastro {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.cadastro-placeholder {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border: 2px dashed #90caf9;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1976d2;
+  background: #f8fbff;
+  transition: all 0.3s ease-in-out;
+}

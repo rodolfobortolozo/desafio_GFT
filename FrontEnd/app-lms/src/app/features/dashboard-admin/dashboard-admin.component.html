@@ -1,0 +1,31 @@
+<section class="hero">
+    <h1>Painel Administrativo</h1>
+    <p>Gerencie cursos, estudantes e matrículas de forma intuitiva.</p>
+  </section>
+
+  <section class="admin-cards">
+
+    <div class="admin-card">
+      <h2>Cursos</h2>
+      <p>Gerencie os cursos disponíveis na plataforma.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <button mat-raised-button color="primary" [routerLink]="['curso','cadastrar']">Cadastrar Curso</button>
+        <button mat-raised-button color="primary" [routerLink]="['curso','listar']">Listar</button>
+      </div>
+      
+    </div>
+
+
+    <div class="admin-card">
+      <h2>Estudantes</h2>
+      <p>Visualize e gerencie os estudantes cadastrados.</p>
+      <button mat-raised-button color="primary" disabled>Acessar</button>
+    </div>
+
+    <!-- Card de exemplo para Matrículas -->
+    <div class="admin-card">
+      <h2>Matrículas</h2>
+      <p>Controle das matrículas ativas e históricos.</p>
+      <button mat-raised-button color="primary" disabled>Acessar</button>
+    </div>
+  </section>

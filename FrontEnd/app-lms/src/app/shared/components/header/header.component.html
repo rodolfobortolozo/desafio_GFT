@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" class="header">
+  <span class="logo">LMS Plataforma</span>
+  <span class="spacer"></span>
+  @if (isLogged()) {
+    <span style="padding: 0 10px">Olá {{ nome }}</span>
+    <button matFab  (click)="logout()" matTooltip="Logout">
+       <mat-icon>logout</mat-icon>
+     </button>
+  }@else{
+    <button matFab [routerLink]="['login']" matTooltip="Login">
+      <mat-icon>login</mat-icon>
+    </button>
+  }
+</mat-toolbar>
