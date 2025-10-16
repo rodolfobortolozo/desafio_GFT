@@ -61,7 +61,7 @@ Criada tabela de parametros no banco de dados para configurar:
 Idade mínima para cadastro
 Quantidade máxima de cursos por aluno
 
-Usuario Administrador: ADMIN, senha: 123.
+# Usuario Administrador: ADMIN, senha: 123.
 
 A criação das Tabelas e a população são feitas pelo flyway
 
@@ -71,7 +71,7 @@ Backend (Spring Boot)
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd backend
 
-# Configure o application.properties ou application.yml com seu banco de dados
+## Configure o application.properties ou application.yml com seu banco de dados
 
 # Rode a aplicação
 ./mvnw spring-boot:run
@@ -79,8 +79,8 @@ cd backend
 Frontend (Angular)
 cd frontend
 
-# Instale as dependências
+## Instale as dependências
 npm install
 
-# Rode a aplicação
+## Rode a aplicação
 ng serve
